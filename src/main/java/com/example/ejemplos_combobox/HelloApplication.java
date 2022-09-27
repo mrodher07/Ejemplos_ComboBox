@@ -31,6 +31,8 @@ public class HelloApplication extends Application {
         scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
         grid.add(scenetitle, 0, 0, 2 ,1);
 
+        //Array con lo objetos/elementos que se van a mostrar en el ComboBox
+
         ObservableList<String> opciones =
                 FXCollections.observableArrayList(
                         "Opcion 1",
@@ -41,8 +43,12 @@ public class HelloApplication extends Application {
                         "Opcion 6"
                 );
 
+        //Ejemplo de ComboBox no editable
+
         ComboBox comboBoxNoEdit = new ComboBox(opciones);
         grid.add(comboBoxNoEdit, 0,1);
+
+        //Ejemplo de ComboBox editable
 
         ComboBox comboBoxEdit = new ComboBox(opciones);
         comboBoxEdit.setEditable(true);
