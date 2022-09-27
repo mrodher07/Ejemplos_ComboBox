@@ -46,13 +46,18 @@ public class HelloApplication extends Application {
         //Ejemplo de ComboBox no editable
 
         ComboBox comboBoxNoEdit = new ComboBox(opciones);
+        comboBoxNoEdit.setEditable(false);
         grid.add(comboBoxNoEdit, 0,1);
+
+        comboBoxNoEdit.setVisibleRowCount(3);
 
         //Ejemplo de ComboBox editable
 
         ComboBox comboBoxEdit = new ComboBox(opciones);
         comboBoxEdit.setEditable(true);
         grid.add(comboBoxEdit, 0, 2);
+
+
 
         Scene scene = new Scene(grid, 320, 240);
         stage.setTitle("Ejemplos sobre el componente ComboBox");
